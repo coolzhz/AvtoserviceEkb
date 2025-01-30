@@ -104,12 +104,28 @@
             padding-bottom: 120px; /* Добавлен отступ снизу для секции контактов */
         }
         .carousel-caption {
-            background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для текста */
-            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон для текста */
+            padding: 15px;
             border-radius: 5px;
+            text-align: center;
         }
         .carousel-caption h5, .carousel-caption p {
             color: white; /* Цвет текста */
+        }
+        .carousel-caption h5 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .carousel-caption p {
+            font-size: 1.1em;
+        }
+        @media (max-width: 768px) {
+            .carousel-caption h5 {
+                font-size: 1.2em;
+            }
+            .carousel-caption p {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
@@ -147,6 +163,10 @@
                         <h5>Диагностика и ремонт двигателей</h5>
                         <p>Полная диагностика и ремонт всех типов двигателей. Наши специалисты используют современное оборудование для точного выявления неисправностей.</p>
                     </div>
+                    <div class="carousel-caption d-md-none">
+                        <h5>Диагностика и ремонт двигателей</h5>
+                        <p>Полная диагностика и ремонт всех типов двигателей.</p>
+                    </div>
                 </div>
                 <div class="carousel-item">
                     <img src="https://file.euroauto.ru/v2/file/content-admin/meduza-pages/7902.jpg" class="d-block w-100" alt="Шиномонтаж и балансировка">
@@ -154,12 +174,20 @@
                         <h5>Шиномонтаж и балансировка</h5>
                         <p>Быстрый и качественный шиномонтаж и балансировка колес. Мы используем только проверенные материалы и технологии.</p>
                     </div>
+                    <div class="carousel-caption d-md-none">
+                        <h5>Шиномонтаж и балансировка</h5>
+                        <p>Быстрый и качественный шиномонтаж и балансировка колес.</p>
+                    </div>
                 </div>
                 <div class="carousel-item">
                     <img src="https://i.1.creatium.io/04/15/69/6085aa32b0a5956d84a89d1a00546b59df/005.jpg" class="d-block w-100" alt="Электрические работы">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Электрические работы</h5>
                         <p>Ремонт и диагностика всех электрических систем автомобиля. Мы восстановим работоспособность вашей электроники быстро и качественно.</p>
+                    </div>
+                    <div class="carousel-caption d-md-none">
+                        <h5>Электрические работы</h5>
+                        <p>Ремонт и диагностика всех электрических систем автомобиля.</p>
                     </div>
                 </div>
             </div>
