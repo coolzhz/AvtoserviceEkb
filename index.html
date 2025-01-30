@@ -55,7 +55,7 @@
         .hero {
             background: url('https://fbuz11.ru/thumb/2/K_G_SpscKjQnOblrsEpTmg/r/d/vybor_avtoservisa.jpg') no-repeat center center/cover;
             height: 300px;
-            color: white;
+            color: black; /* Изменено на черный цвет */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -63,6 +63,7 @@
         }
         .hero h1 {
             font-size: 3em;
+            color: black; /* Изменено на черный цвет */
         }
         @media (max-width: 768px) {
             .hero h1 {
@@ -79,6 +80,7 @@
             display: flex;
             justify-content: center;
             gap: 10px;
+            margin-top: 40px; /* Увеличен отступ сверху для кнопок */
         }
         .contact-button {
             display: inline-block;
@@ -97,6 +99,9 @@
         }
         .telegram {
             background-color: #0088cc;
+        }
+        .section-contact {
+            padding-bottom: 120px; /* Добавлен отступ снизу для секции контактов */
         }
     </style>
 </head>
@@ -195,7 +200,7 @@
         </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="section-contact">
         <h2>Контакты</h2>
         <p>Адрес: г. Екатеринбург, ул. Автомобильная, д. 10</p>
         <p>Телефон: +7 (999) 123-45-67</p>
