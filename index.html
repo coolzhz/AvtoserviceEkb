@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Автосервис в Екатеринбурге</title>
     <meta name="description" content="Профессиональный автосервис в Екатеринбурге. Диагностика, ремонт двигателей, шиномонтаж, электрические работы, кузовной ремонт и техническое обслуживание автомобилей.">
     <meta name="keywords" content="автосервис, Екатеринбург, диагностика, ремонт двигателей, шиномонтаж, электрические работы, кузовной ремонт, техническое обслуживание">
     <meta name="author" content="Ваше имя">
@@ -48,12 +48,18 @@
         header {
             background: linear-gradient(90deg, #ff7e5f, #feb47b); /* Градиент */
             color: #fff;
-            padding: 20px 0;
             text-align: center;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        header.full {
+            padding: 20px 0;
+        }
+        header.slim {
+            padding: 10px 0;
         }
         header nav {
             display: flex;
@@ -198,7 +204,7 @@
     </style>
 </head>
 <body>
-<header>
+<header class="full">
     <h1>Автосервис в Екатеринбурге</h1>
     <nav>
         <a href="#home">Главная</a>
@@ -304,6 +310,30 @@
         setTimeout(() => {
             cursor.classList.remove('pulsing');
         }, 300); // Убираем класс через 0.3 секунды
+    });
+
+    // Скрытие и изменение хедера при прокрутке
+    let lastScrollTop = 0;
+    const header = document.querySelector('header');
+
+    window.addEventListener('scroll', function() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop) {
+            // Прокрутка вниз
+            header.classList.remove('full');
+            header.classList.add('slim');
+            if (scrollTop > 100) {
+                header.style.top = '-100px'; // Полностью скрываем хедер после определенной точки прокрутки
+            } else {
+                header.style.top = '0';
+            }
+        } else {
+            // Прокрутка вверх
+            header.classList.remove('slim');
+            header.classList.add('full');
+            header.style.top = '0';
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Для обработки случаев, когда scrollTop может быть меньше 0
     });
 
     // Темная тема
